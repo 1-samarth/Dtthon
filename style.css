@@ -1,0 +1,338 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Toolbar container */
+.toolbar {
+    width: 100%;
+    height: 60px;
+    background-color:#F0F0F0; /* Change this to match your Figma design */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.logo img {
+    height: 40px;
+}
+.logo{
+    margin-left: 83px;
+}
+
+/* Navigation links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Toolbar actions (Submit button & Profile) */
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+
+
+.user-avatar img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.main-content {
+    display: flex;
+    width: 100vw;
+    height: 100vh; /* Full height */
+   /* Ensures no extra scrolling */
+}
+
+.left-side-bar {
+    width: 5%;
+    background-color: #ffffff; /* Example color */
+    height: 50vh;
+    display: block;
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+    overflow: hidden;
+    z-index: 1000;
+
+}
+
+/* Expanded Sidebar */
+.left-side-bar.expanded {
+    width: 20%; /* Adjust width when expanded */
+}
+
+.sideBar-header {
+    height: 15%;
+    background-color: black;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.sidebar-menu{
+    font-family: Poppins;
+    height: 100%;
+    
+
+}
+
+.sideBar-body {
+    height: 85%;
+    background-color: #ffffff; /* Example color */
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: #eeeeee solid 1px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2); /* Right-side shadow */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Content When Expanded */
+.left-side-bar.expanded .sideBar-body {
+    opacity: 1;
+}
+
+/* Arrow Button */
+.arrow-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 30px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate Arrow when Sidebar is Expanded */
+.left-side-bar.expanded .arrow-button img {
+    transform: rotate(180deg);
+}
+
+.arrow-button img {
+    width: 35px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Middle & Right Sidebar */
+
+
+.journey-text {
+    color: white;
+    font-size: 16px;
+    display: none; /* Hidden initially */
+    font-family: Poppins;
+    font-weight: 600;
+    margin-left: 18px;
+}
+
+.left-side-bar.expanded .journey-text {
+    display: inline; /* Show text when expanded */
+}
+
+
+.right-side-bar {
+    width: 15%;
+    
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    /* box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2); Shadow effect */
+}
+
+.upper-section-side-bar {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.notice-container {
+    width: 50%;
+    background-color: #000000;
+    height: 40vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);
+   
+}
+.blank-container {
+    width: 50%;
+    background-color: #ffffff;
+    height: 40vh;
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);
+    border: #b7b5b5 solid 1px;
+
+   
+}
+
+
+
+
+/* When hovering over the sidebar, reveal the notice text */
+.middle-container {
+    width: 80%;
+    background-color: #ffffff; /* Example color */
+    padding-left: 120px;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 40px;
+    /* border-bottom: #b7b5b5 solid 1px; */
+    /* box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2); Right-side shadow */
+}
+.section1 button{
+    background-color: #0029FF;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+ 
+}
+.section1 p{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 25px;
+    color: #0029FF;
+}
+.section1 p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.section1 button:hover{
+    cursor: pointer;
+    
+}
+.section1 button:active{
+    background-color: #0029FF;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.section2{
+    padding: 10px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #E9ECEF;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+#section3{
+    padding: 10px;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 40px;
+    margin-left: 100px;
+
+  
+
+   
+
+}
+.card{
+
+    width: 480px;
+    height: 580px;
+    border-radius: 15px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+
+}
+.card-header{
+    background-color: #000000;
+    height: 50px;
+    border-top-right-radius:15px ;
+    border-top-left-radius:15px ;
+    display: flex;
+    align-items: center;
+   
+    padding: 10px;
+    color: #ffffff;
+    font-family: Poppins;
+}
+.card-discription{
+    background-color: #FDFDFD;
+    height: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: poppins;
+}
+.card-body{
+    background-color: #FDFDFD;
+    display: block;
+    width: 100%;
+}
+.card-title{
+    font-family: poppins;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
