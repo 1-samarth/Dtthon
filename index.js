@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    
     const jsonData = {
         "_id": { "$oid": "63b64dc9e3b230ebb60a495d" },
         "title": "Technical Project Management",
